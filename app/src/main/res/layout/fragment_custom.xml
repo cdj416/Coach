@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/customBg"
+    android:background="@color/color_FFFFFF"
+    android:orientation="vertical">
+    <com.hongyuan.coach.custom_view.TitleView
+        android:id="@+id/mTitle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:visibility="gone"
+        app:line_show="false"/>
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <com.scwang.smartrefresh.layout.SmartRefreshLayout
+            android:id="@+id/refresh"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <FrameLayout
+                android:id="@+id/mainView"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"/>
+        </com.scwang.smartrefresh.layout.SmartRefreshLayout>
+
+
+        <RelativeLayout
+            android:id="@+id/load_box"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:visibility="gone"
+            android:layout_centerInParent="true">
+
+            <TextView
+                android:id="@+id/isEmpty"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:drawableTop="@mipmap/promt_empty_img"
+                android:drawablePadding="10dp"
+                android:layout_centerInParent="true"
+                android:visibility="gone"
+                android:gravity="center"
+                android:text="暂无数据！"
+                android:textSize="18dp"
+                android:textColor="@color/color_48495F" />
+
+            <TextView
+                android:id="@+id/isErr"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:drawableTop="@mipmap/view_erro"
+                android:drawablePadding="@dimen/dp_5"
+                android:layout_centerInParent="true"
+                android:text="请求出错，请下拉刷新！"
+                android:visibility="gone"
+                android:gravity="center"
+                android:textSize="18dp"
+                android:textColor="@color/color_48495F" />
+        </RelativeLayout>
+    </FrameLayout>
+
+</LinearLayout>

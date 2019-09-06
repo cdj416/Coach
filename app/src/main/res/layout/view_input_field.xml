@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+    <TextView
+        android:id="@+id/titleName"
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
+        android:gravity="center_vertical"
+        android:textColor="@color/color_FF999999"
+        android:textSize="12sp" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="40dp">
+
+        <EditText
+            android:id="@+id/et_content"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@null"
+            android:gravity="center_vertical"
+            android:inputType="number"
+            android:textColor="@color/color_FF333333"
+            android:textSize="16sp" />
+
+
+        <ImageView
+            android:id="@+id/iv_content"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:visibility="gone"
+            android:src="@mipmap/vtwo_login_eye_off_img_" />
+
+        <RelativeLayout
+            android:id="@+id/sendMessageBox"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal">
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1px"
+                android:layout_marginRight="110dp"
+                android:layout_alignParentBottom="true"
+                android:background="@color/color_CCCCCC" />
+            <Button
+                android:id="@+id/sendMessage"
+                android:layout_width="94dp"
+                android:layout_height="match_parent"
+                android:textColor="@color/color_FF333333"
+                android:textSize="@dimen/sp_12"
+                android:background="@drawable/shape_radius6_00000000_stroke_3da1e7"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:visibility="visible"
+                android:text="发送验证码"/>
+        </RelativeLayout>
+    </RelativeLayout>
+
+    <View
+        android:id="@+id/bottomLine"
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:background="@color/color_CCCCCC" />
+</LinearLayout>

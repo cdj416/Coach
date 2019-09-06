@@ -1,0 +1,180 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!--自定义title-->
+    <declare-styleable name="TitleView">
+        <attr name="left_image" format="reference"/>
+        <attr name="center_image" format="reference"/>
+        <attr name="right_image" format="reference"/>
+
+        <attr name="left_text" format="reference|string"/>
+        <attr name="center_text" format="reference|string"/>
+        <attr name="right_text" format="reference|string"/>
+        <attr name="text_color" format="color"/>
+        <attr name="line_show" format="boolean"/>
+    </declare-styleable>
+
+    <declare-styleable name="StatusBarHeightView">
+        <attr name="use_type" format="integer">
+            <enum name="use_height" value="0" />
+            <enum name="use_padding_top" value="1" />
+        </attr>
+    </declare-styleable>
+
+    <!--自定义气泡-->
+    <declare-styleable name="bubble">
+        <attr name="shadowColor" format="color" />
+        <attr name="padding" format="dimension" />
+        <attr name="strokeWidth" format="dimension" />
+        <attr name="cornerRadius" format="dimension" />
+        <attr name="halfBaseOfLeg" format="dimension" />
+    </declare-styleable>
+
+    <!--自定义input样式-->
+    <declare-styleable name="InputFiledView">
+        <attr name="title_name" format="string"/>
+        <attr name="input_line_show" format="boolean"/>
+        <attr name="input_type">
+            <enum name="text" value="0"/>
+            <enum name="phone" value="1"/>
+            <enum name="textPassword" value="2"/>
+        </attr>
+        <attr name="show_type">
+            <enum name="pureInput" value="0"/>
+            <enum name="verificationCode" value="1"/>
+            <enum name="password" value="2"/>
+        </attr>
+    </declare-styleable>
+
+    <!--九宫格需要的样式-->
+    <declare-styleable name="NineGridImageView">
+        <attr format="dimension" name="singleImgSize"/>
+        <attr format="dimension" name="imgGap"/>
+        <attr format="integer" name="maxSize"/>
+        <attr format="enum" name="showStyle">
+            <enum name="grid" value="0"/>
+            <enum name="fill" value="1"/>
+        </attr>
+    </declare-styleable>
+
+    <!--个人中心内容显示样式-->
+    <declare-styleable name="PersonContentView">
+        <attr name="person_show_type" format="integer"/>
+    </declare-styleable>
+
+    <!-- 是否开启抗锯齿 -->
+    <attr name="antiAlias" format="boolean" />
+    <!-- 圆弧起始角度，3点钟方向为0，顺时针递增，小于0或大于360进行取余 -->
+    <attr name="startAngle" format="float" />
+    <!-- 圆弧度数 -->
+    <attr name="sweepAngle" format="float" />
+    <!-- 设置动画时间 -->
+    <attr name="animTime" format="integer" />
+    <!-- 绘制内容的数值 -->
+    <attr name="maxValue" format="float" />
+    <attr name="value" format="float" />
+    <!-- 绘制内容的单位 -->
+    <attr name="unit" format="string|reference" />
+    <attr name="unitSize" format="dimension" />
+    <attr name="unitColor" format="color|reference" />
+    <!-- 绘制内容相应的提示语 -->
+    <attr name="hint" format="string|reference" />
+    <attr name="hintSize" format="dimension" />
+    <attr name="hintColor" format="color|reference" />
+    <!-- 精度，默认为0 -->
+    <attr name="precision" format="integer" />
+    <attr name="valueSize" format="dimension" />
+    <attr name="valueColor" format="color|reference" />
+    <!-- 圆弧颜色，设置多个可实现渐变 -->
+    <attr name="arcColor1" format="color|reference" />
+    <attr name="arcColor2" format="color|reference" />
+    <attr name="arcColor3" format="color|reference" />
+    <!-- 背景圆弧颜色，默认白色 -->
+    <attr name="bgArcColor" format="color|reference" />
+    <!-- 圆弧宽度 -->
+    <attr name="arcWidth" format="dimension" />
+    <!-- 圆弧颜色， -->
+    <attr name="arcColors" format="color|reference" />
+    <!-- 文字的偏移量。相对于圆半径而言，默认三分之一 -->
+    <attr name="textOffsetPercentInRadius" format="float" />
+
+    <!-- 圆形进度条 -->
+    <declare-styleable name="CircleProgressBar">
+        <attr name="antiAlias" />
+        <attr name="startAngle" />
+        <attr name="sweepAngle" />
+        <attr name="animTime" />
+        <attr name="maxValue" />
+        <attr name="value" />
+        <attr name="precision" />
+        <attr name="valueSize" />
+        <attr name="valueColor" />
+        <attr name="textOffsetPercentInRadius" />
+        <!-- 绘制内容相应的提示语 -->
+        <attr name="hint" />
+        <attr name="hintSize" />
+        <attr name="hintColor" />
+        <!-- 绘制内容的单位 -->
+        <attr name="unit" />
+        <attr name="unitSize" />
+        <attr name="unitColor" />
+        <!-- 圆弧宽度 -->
+        <attr name="arcWidth" />
+        <attr name="arcColors" />
+        <!-- 背景圆弧颜色 -->
+        <attr name="bgArcColor" />
+        <!-- 背景圆弧宽度 -->
+        <attr name="bgArcWidth" format="dimension" />
+    </declare-styleable>
+
+    <!--条形进度条的自定义属性-->
+    <declare-styleable name="BarPercentView">
+        <!--进度条高度-->
+        <attr name="barHeight" format="dimension" />
+        <!--圆角矩形半径-->
+        <attr name="barRadius" format="integer" />
+        <!--进度条背景色-->
+        <attr name="barBgColor" format="reference" />
+        <!--进度条颜色-->
+        <attr name="barProgressColor" format="reference" />
+        <!--渐变开始颜色-->
+        <attr name="barStartColor" format="reference" />
+        <!--渐变结束颜色-->
+        <attr name="barEndColor" format="reference" />
+        <!--是否渐变-->
+        <attr name="barIsGradient" format="boolean" />
+    </declare-styleable>
+
+    <!--标尺选择器-->
+    <declare-styleable name="RulerView">
+        <attr name="textColor" format="color" />
+        <attr name="textSize" format="dimension" />
+        <attr name="lineColor" format="color" />
+        <attr name="lineSpaceWidth" format="dimension" />
+        <attr name="lineWidth" format="dimension" />
+        <attr name="lineMaxHeight" format="dimension" />
+        <attr name="lineMidHeight" format="dimension" />
+        <attr name="lineMinHeight" format="dimension" />
+        <attr name="textMarginTop" format="dimension" />
+        <attr name="alphaEnable" format="boolean" />
+        <attr name="rulMinValue" format="float"/>
+        <attr name="rulMaxValue" format="float"/>
+        <attr name="selectorValue" format="float"/>
+        <attr name="perValue" format="float"/>
+    </declare-styleable>
+    <!--时间选择器需要的-->
+    <declare-styleable name="pickerview">
+        <attr name="wheelview_gravity">
+            <enum name="center" value="17"/>
+            <enum name="left" value="3"/>
+            <enum name="right" value="5"/>
+        </attr>
+        <attr name="wheelview_textSize" format="dimension"/>
+        <attr name="wheelview_textColorOut" format="color"/>
+        <attr name="wheelview_textColorCenter" format="color"/>
+        <attr name="wheelview_dividerColor" format="color"/>
+        <attr name="wheelview_lineSpacingMultiplier" format="float"/>
+    </declare-styleable>
+
+
+</resources>

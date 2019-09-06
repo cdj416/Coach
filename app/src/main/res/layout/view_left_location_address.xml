@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content">
+    <TextView
+        android:id="@+id/addressName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:drawableRight="@mipmap/down_huise_img"
+        android:drawableLeft="@mipmap/location_heise_img"
+        android:drawablePadding="5dp"
+        android:text="湖州"/>
+</LinearLayout>

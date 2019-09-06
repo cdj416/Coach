@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+    <data>
+        <variable
+            name="ViewModel"
+            type="com.alipayjf.game.base.CustomActivity"/>
+    </data>-->
+<FrameLayout
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/color_FFFFFF">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:background="#FFF2F2F2">
+        <com.hongyuan.coach.custom_view.StatusBarHeightView
+            android:id="@+id/barHeight"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:visibility="gone"/>
+        <com.hongyuan.coach.custom_view.TitleView
+            android:id="@+id/mainTitle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/white"
+            app:left_image="@mipmap/back_common"
+            app:line_show="true"/>
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <com.scwang.smartrefresh.layout.SmartRefreshLayout
+                android:id="@+id/refresh"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+                <FrameLayout
+                    android:id="@+id/mainView"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"/>
+            </com.scwang.smartrefresh.layout.SmartRefreshLayout>
+
+
+            <RelativeLayout
+                android:id="@+id/load_box"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:visibility="gone"
+                android:layout_marginTop="40dp"
+                android:layout_centerInParent="true">
+
+                <TextView
+                    android:id="@+id/isEmpty"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:drawableTop="@mipmap/data_empty"
+                    android:drawablePadding="@dimen/dp_5"
+                    android:layout_centerInParent="true"
+                    android:visibility="gone"
+                    android:gravity="center"
+                    android:text="暂无数据！"
+                    android:textSize="18dp"
+                    android:textColor="@color/color_48495F" />
+
+                <TextView
+                    android:id="@+id/isErr"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:drawableTop="@mipmap/view_erro"
+                    android:drawablePadding="@dimen/dp_5"
+                    android:layout_centerInParent="true"
+                    android:text="请求出错，请下拉刷新！"
+                    android:visibility="gone"
+                    android:gravity="center"
+                    android:textSize="18dp"
+                    android:textColor="@color/color_48495F" />
+            </RelativeLayout>
+        </FrameLayout>
+    </LinearLayout>
+</FrameLayout>
+
+<!--</layout>-->
+

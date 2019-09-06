@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/outBox"
+    android:orientation="vertical">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="70dp">
+        <com.makeramen.roundedimageview.RoundedImageView
+            android:id="@+id/headImg"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:src="@mipmap/about_class_select"
+            app:riv_corner_radius="100dp"
+            android:layout_centerVertical="true"
+            android:scaleType="fitXY"/>
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_toRightOf="@id/headImg"
+            android:layout_marginLeft="12dp"
+            android:orientation="vertical">
+            <TextView
+                android:id="@+id/fName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="@dimen/sp_16"
+                android:textColor="@color/color_FF333333"
+                android:text="Valentina"/>
+            <TextView
+                android:id="@+id/timeAfter"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="@dimen/sp_12"
+                android:textColor="@color/color_FF999999"
+                android:text="15分钟前"/>
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/attention"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_alignParentRight="true"
+            android:textColor="@color/color_FF999999"
+            android:textSize="12sp"
+            android:gravity="center"
+            android:padding="10dp"
+            android:drawableLeft="@mipmap/like_huise_img"
+            android:drawablePadding="6dp"
+            android:text="32"/>
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/commentContent"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="15dp"
+        android:textColor="@color/color_FF333333"
+        android:textSize="@dimen/sp_14"
+        android:text="好羡慕你这个身材，棒棒哒！"/>
+
+
+</LinearLayout>

@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<alpha xmlns:android="http://schemas.android.com/apk/res/android"
+    android:fromAlpha="1.0"
+    android:toAlpha="0.0"
+    android:duration="700"
+    android:fillAfter="true">
+
+</alpha>
+
+    <!--android:fromAlpha="1.0"         起始透明度，取值范围0.0&#45;&#45;1.0 ，从完全透明到完全不透明-->
+    <!--android:toAlpha="0.1"           结束透明度，取值范围同上-->
+
+    <!--android:duration="700"             动画持续时间，毫秒为单位-->
+    <!--android:fillAfter="true"           动画结束后，保持结束时的状态-->
+    <!--android:fillBefore="true"          动画结束后，恢复为初始状态-->
+    <!--android:fillEnabled="true"         效果同上-->
+    <!--android:repeatCount="5"            重复次数,取值为-1时无限重复，默认动画执行一次-->
+    <!--android:repeatMode ="reverse"      重复模式，有reverse和restart两个值，前者为倒序回放，后者为重新开始-->

@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="10dp"
+    android:layout_marginBottom="10dp"
+    android:orientation="vertical">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="70dp">
+        <com.makeramen.roundedimageview.RoundedImageView
+            android:id="@+id/headImg"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:src="@mipmap/about_class_select"
+            app:riv_corner_radius="100dp"
+            android:layout_centerVertical="true"
+            android:scaleType="centerCrop"/>
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_toRightOf="@id/headImg"
+            android:layout_marginLeft="12dp"
+            android:orientation="vertical">
+            <TextView
+                android:id="@+id/userName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="@dimen/sp_16"
+                android:textColor="@color/color_FF333333"
+                android:text="Valentina"/>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+                <RatingBar
+                    android:id="@+id/myRat"
+                    android:layout_width="wrap_content"
+                    android:layout_height="12dp"
+                    style="@style/fiveRatingBar"
+                    android:layout_gravity="center"
+                    android:numStars="5"
+                    android:rating="5"/>
+                <TextView
+                    android:id="@+id/barText"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/color_FF999999"
+                    android:textSize="@dimen/sp_12"
+                    android:text="超出预期"/>
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:gravity="right"
+            android:orientation="vertical">
+            <TextView
+                android:id="@+id/commentTime"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/color_FF999999"
+                android:textSize="@dimen/sp_12"
+                android:text="2019.6.2 15:00"/>
+            <TextView
+                android:id="@+id/cpName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/color_FF999999"
+                android:textSize="@dimen/sp_12"
+                android:text="减脂塑形"/>
+        </LinearLayout>
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/commentContent"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textColor="@color/color_FF333333"
+        android:textSize="@dimen/sp_14"
+        android:text="你们有没有在好好健身呀～"/>
+
+    <com.hongyuan.coach.custom_view.nine_gridimg.NineGridImageView
+        android:id="@+id/nineGridImg"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="10dp"
+        android:layout_marginTop="10dp"
+        app:imgGap="5dp"
+        app:showStyle="fill"
+        app:singleImgSize="200dp"/>
+
+</LinearLayout>

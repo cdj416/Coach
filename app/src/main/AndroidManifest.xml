@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.hongyuan.coach">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW" />
+    <uses-permission android:name="android.permission.CALL_PHONE" />
+    <uses-permission android:name="android.permission.VIBRATE"/>
+
+    <!--用于获取wifi的获取权限，wifi信息会用来进行网络定位-->
+    <uses-permission android:name="android.permission.CHANGE_WIFI_STATE" />
+    <!--用于申请获取蓝牙信息进行室内定位-->
+    <uses-permission android:name="android.permission.BLUETOOTH"/>
+    <uses-permission android:name="android.permission.BLUETOOTH_ADMIN"/>
+    <!-- 以下是定位需要的权限 -->
+    <uses-permission android:name="android.permission.WAKE_LOCK"/>
+    <!-- 用于进行网络定位 -->
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION"/>
+    <!-- 用于访问GPS定位 -->
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION"/>
+    <!-- 用于提高GPS定位速度 -->
+    <uses-permission android:name="android.permission.ACCESS_LOCATION_EXTRA_COMMANDS"/>
+    <!-- 更改设置 -->
+    <uses-permission android:name="android.permission.WRITE_SETTINGS"
+        tools:ignore="ProtectedPermissions" />
+    <!--如果设置了target >= 28 如果需要启动后台定位则必须声明这个权限-->
+    <uses-permission android:name="android.permission.FOREGROUND_SERVICE"/>
+
+    <application
+        android:name=".base.MyApplication"
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme"
+        tools:ignore="GoogleAppIndexingWarning"
+        android:usesCleartextTraffic="true"
+        tools:targetApi="m">
+
+        <meta-data
+            android:name="design_width_in_dp"
+            android:value="375"/>
+        <meta-data
+            android:name="design_height_in_dp"
+            android:value="825"/>
+
+        <!-- 设置高德地图key -->
+        <meta-data
+            android:name="com.amap.key"
+            android:value="289feade603bfed3445727de691a8c0e"/>
+        <!-- 定位需要的服务 -->
+        <service android:name="com.amap.api.location.APSService"/>
+
+
+        <!--更新app需要的配置-->
+        <provider
+            android:name="androidx.core.content.FileProvider"
+            android:authorities="${applicationId}"
+            android:exported="false"
+            android:grantUriPermissions="true">
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/file_paths_public" />
+        </provider>
+
+        <receiver
+            android:name=".ui.service.MyReceiver"
+            android:enabled="true"
+            android:exported="false">
+            <intent-filter>
+                <action android:name="cn.jpush.android.intent.REGISTRATION" /> <!--Required  用户注册SDK的intent-->
+                <action android:name="cn.jpush.android.intent.MESSAGE_RECEIVED" /> <!--Required  用户接收SDK消息的intent-->
+                <action android:name="cn.jpush.android.intent.NOTIFICATION_RECEIVED" /> <!--Required  用户接收SDK通知栏信息的intent-->
+                <action android:name="cn.jpush.android.intent.NOTIFICATION_OPENED" /> <!--Required  用户打开自定义通知栏的intent-->
+                <action android:name="cn.jpush.android.intent.ACTION_RICHPUSH_CALLBACK" /> <!--Optional 用户接受Rich Push Javascript 回调函数的intent-->
+                <action android:name="cn.jpush.android.intent.CONNECTION" /><!-- 接收网络变化 连接/断开 since 1.6.3 -->
+                <category android:name="com.hongyuan.coach" /><!-- name为当前项目的包名 -->
+            </intent-filter>
+        </receiver>
+
+        <activity android:name=".ui.activity.StartupPageActivity"
+            android:theme="@style/SplashStyle">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <activity android:name=".ui.activity.MainActivity" android:launchMode="singleTask"/>
+        <activity android:name=".ui.activity.LoginActivity"/>
+        <activity android:name=".ui.activity.VerificationLoginActivity"/>
+        <activity android:name=".ui.activity.RegisterdActivity"/>
+        <activity android:name=".ui.activity.ModifyPasswordActivity"/>
+        <activity android:name=".ui.activity.EditPostActivity" android:windowSoftInputMode="adjustResize"/>
+        <activity android:name=".ui.activity.MyPlayActivity"/>
+        <activity android:name=".ui.activity.PostDetailsActivity"/>
+        <activity android:name=".ui.activity.CommentDetailsActivity" android:windowSoftInputMode="adjustResize"/>
+        <activity android:name=".ui.activity.FriendsActivity"/>
+        <activity android:name=".ui.activity.CourseDetailsActivity"/>
+        <activity android:name=".ui.activity.EditCourseActivity"/>
+        <activity android:name=".ui.activity.CourseCalendarActivity"/>
+        <activity android:name=".ui.activity.EditTimeActivity"/>
+        <activity android:name=".ui.activity.CoachHomePageActivity"/>
+        <activity android:name=".ui.activity.CoachProfileActivity"/>
+        <activity android:name=".ui.activity.CourseListActivity"/>
+        <activity android:name=".ui.activity.MyStudentsActivity"/>
+        <activity android:name=".ui.activity.VtwoLoginActivity" android:launchMode="singleTask"/>
+        <activity android:name=".ui.activity.MyWebViewActivity"/>
+        <activity android:name=".ui.activity.AgreementActivity"/>
+        <activity android:name=".ui.activity.VtwoVerificationLoginActivity"/>
+        <activity android:name=".ui.activity.VtwoModifyPasswordActivity"/>
+        <activity android:name=".ui.activity.SettingActivity"/>
+        <activity android:name=".ui.activity.AboutUsActivity"/>
+        <activity android:name=".ui.activity.ScanActivity"/>
+        <activity android:name=".ui.activity.CoachImgActivity"/>
+    </application>
+
+</manifest>

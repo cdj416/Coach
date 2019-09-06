@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <data>
+        <variable
+            name="ViewModel"
+            type="com.hongyuan.coach.ui.view_model.MainViewModel"/>
+    </data>
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <androidx.coordinatorlayout.widget.CoordinatorLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <com.hongyuan.coach.custom_view.NoTouchViewPager
+                android:id="@+id/viewPager"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginBottom="32dp"
+                app:layout_behavior="@string/appbar_scrolling_view_behavior"/>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1px"
+                android:background="@color/color_EEEEEE"
+                android:layout_gravity="bottom"
+                android:layout_marginBottom="58dp"/>
+            <me.majiajie.pagerbottomtabstrip.PageNavigationView
+                android:id="@+id/tab"
+                android:layout_width="match_parent"
+                android:layout_height="58dp"
+                android:layout_gravity="bottom"
+                android:background="@color/color_FFFFFF"
+                app:layout_behavior=".ui.my_view.BottomViewBehavior"/>
+
+        </androidx.coordinatorlayout.widget.CoordinatorLayout>
+        <com.hongyuan.coach.custom_view.version_change.VersionChangeView
+            android:id="@+id/versionView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"/>
+    </FrameLayout>
+
+</layout>

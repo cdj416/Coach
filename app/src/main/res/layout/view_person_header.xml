@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="258dp"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:src="@mipmap/person_bg"
+        android:scaleType="centerCrop"/>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:gravity="bottom">
+        <com.makeramen.roundedimageview.RoundedImageView
+            android:id="@+id/headImg"
+            android:layout_width="70dp"
+            android:layout_height="70dp"
+            android:src="@mipmap/default_head_img"
+            android:layout_gravity="center_horizontal"
+            app:riv_corner_radius="100dp"
+            android:scaleType="centerCrop"/>
+
+        <TextView
+            android:id="@+id/userName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/color_FFFFFF"
+            android:textSize="@dimen/sp_16"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="12dp"
+            android:layout_marginBottom="48dp"
+            android:text="GrayF"/>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="12dp"
+            android:gravity="center_vertical"
+            android:visibility="gone"
+            android:orientation="horizontal">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="@dimen/sp_12"
+                android:textColor="@color/color_FFFFFF"
+                android:alpha="0.8"
+                android:text="v23"/>
+
+            <ProgressBar
+                android:id="@+id/progressBar"
+                style="@style/ProgressBar_Scale"
+                android:layout_width="164dp"
+                android:layout_height="4dp"
+                android:layout_marginEnd="8dp"
+                android:layout_marginStart="8dp"
+                android:progress="30"/>
+        </LinearLayout>
+    </LinearLayout>
+</RelativeLayout>
